@@ -59,10 +59,10 @@ const Register = () => {
 
   return (
     <>
-        <div className='container mx-auto'>
+        <div className='container mx-auto bg-gradient-to-r from-stone-600 to-green-800'>
             <div>
-                <div className="lg:w-1/2 mx-auto">
-                <h2 className='text-3xl font-worksans font-bold'>Create a Haven Hub account</h2>
+                <div className="lg:w-1/2 mx-auto bg-white px-10 py-5 border-2 rounded-lg font-Raleway">
+                <h2 className='text-3xl font-Poppins font-bold'>Create a <span className='font-Lora bg-gradient-to-r from-red-900 to-red-500 bg-clip-text text-transparent'>Taste Trove</span> account</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-control">
                             <label className="label">
@@ -110,7 +110,7 @@ const Register = () => {
                             </label>
                             </div>
                             <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
+                            <button className="btn btn-primary text-white font-Lora">Register</button>
                             <div className="text-center mt-4">
                                 <p>Already have an account? <Link to="/login" className="font-bold">Login</Link></p>
                                 <ToastContainer></ToastContainer>
