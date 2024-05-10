@@ -60,11 +60,11 @@ const Navbar = () => {
               </ul>
             </div>
             <Link
-              className="btn btn-ghost text-xl font-Raleway hidden md:flex lg:flex"
+              className="btn btn-ghost text-xl font-bo font-Raleway bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent hidden md:flex lg:flex"
               to="/"
             >
               {" "}
-              <IoRestaurant />
+              <IoRestaurant className="text-red-300" />
               Taste Trove
             </Link>
           </div>
