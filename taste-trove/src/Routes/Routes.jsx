@@ -9,6 +9,11 @@ import Login from "../Pages/SharedPages/Navbar/Login/Login";
 import Register from "../Pages/SharedPages/Navbar/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const router = createBrowserRouter([
   {
     path: "/",
