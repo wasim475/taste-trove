@@ -6,6 +6,7 @@ import slider4 from "../../assets/SliderImages/sl4.png";
 const Banner = () => {
   return (
     <>
+    <div className="container mx-auto">
       <div className="carousel w-full">
         <div
           id="slide1"
@@ -128,6 +129,7 @@ const Banner = () => {
             </a>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

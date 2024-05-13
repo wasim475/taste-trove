@@ -7,6 +7,7 @@ import { BsFillEyeFill } from "react-icons/bs";
 import { RiEyeCloseFill } from "react-icons/ri";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Login = () => {
   let [eye, setEye] = useState(false);
@@ -24,7 +25,13 @@ const Login = () => {
     let password = form.get("password");
     signIn(email, password)
       .then((result) => {
-        toast("Login Successfull");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Login successfully!",
+          showConfirmButton: false,
+          timer: 1500
+        });
         setTimeout(() => {
           Navigate(location?.state ? location.state : "/");
         }, 900);

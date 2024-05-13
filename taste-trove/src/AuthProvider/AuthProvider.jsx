@@ -5,6 +5,7 @@ import { FacebookAuthProvider, GoogleAuthProvider, updateProfile , createUserWit
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import app from '../Firebase/firebase.config';
+import Swal from 'sweetalert2';
 
 
 
@@ -20,7 +21,7 @@ const facebookProvider = new FacebookAuthProvider();
 
 const AuthProvider = ({children}) => {
     let [user , setUser] = useState(null)
-    let [loding, setLoading]= useState(true)
+    let [loading, setLoading]= useState(true)
 
    
 
@@ -68,16 +69,26 @@ const AuthProvider = ({children}) => {
         .then((result)=>{
             if(result.user){
                
-                console.log('login hoiche');
-               
-                toast('google logging')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Loging Successfull",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
             }
         })
     }
     const facebookLOgin= ()=>{
         signInWithPopup(auth, facebookProvider)
         .then((result) =>{
-            toast('Login successfull')
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Login Succesfull",
+                showConfirmButton: false,
+                timer: 1500
+              });
         })
     }
 
@@ -98,7 +109,7 @@ const AuthProvider = ({children}) => {
     },[])
     let authInfo = {
         user,
-        loding,
+        loading,
         createUser,
         updateUserProfile,
         signIn,

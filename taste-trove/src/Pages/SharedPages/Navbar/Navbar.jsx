@@ -9,6 +9,7 @@ import { AuthContex } from "../../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
   let { user, logOut } = useContext(AuthContex);
+
   let Navlinks = (
     <>
       <li>
@@ -20,15 +21,23 @@ const Navbar = () => {
       <li>
         <NavLink to="/gallery">Gallery</NavLink>
       </li>
-     {
-      user
-      ?
-      <li>
-        <NavLink to="/my-profile">My Profile</NavLink>
-      </li>
-      :
-      ''
-     }
+      {user ? (
+        <li>
+          <details>
+            <summary>My Profile</summary>
+            <ul className="p-2 z-10">
+              <li>
+                <Link>Submenu 1</Link>
+              </li>
+              <li>
+                <Link>Submenu 2</Link>
+              </li>
+            </ul>
+          </details>
+        </li>
+      ) : (
+        ""
+      )}
     </>
   );
 
@@ -41,7 +50,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="container mx auto">
+      <div className="container mx-auto">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
@@ -69,16 +78,14 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 font-Lora">
-              {Navlinks}
-            </ul>
+            <ul className="menu menu-horizontal px-1 font-Lora">{Navlinks}</ul>
           </div>
           <div className="navbar-end">
             {user ? (
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="">
                   <div className="avatar">
-                    <div className="lg:w-20 md:w-16 w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="lg:w-16 md:w-16 w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       <img
                         src={
                           user?.photoURL ||
@@ -93,7 +100,13 @@ const Navbar = () => {
                   className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <Link to="/my-profile">My Profile</Link>
+                    <Link to="/my-added-foods">My added food items</Link>
+                  </li>
+                  <li>
+                    <Link to="/added-food-item">Add a food item</Link>
+                  </li>
+                  <li>
+                    <Link to="/my-profile">My ordered food items</Link>
                   </li>
                   <li>
                     <Link onClick={handleLogout}>Log Out</Link>
@@ -102,7 +115,10 @@ const Navbar = () => {
                 </ul>
               </div>
             ) : (
-              <Link className="btn bg-primaryColor font-Lora text-white" to="/login">
+              <Link
+                className="btn bg-primaryColor font-Lora text-white"
+                to="/login"
+              >
                 Login
               </Link>
             )}

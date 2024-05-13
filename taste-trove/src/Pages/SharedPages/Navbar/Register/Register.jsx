@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form"
 import { BsFillEyeFill } from "react-icons/bs";
 import { RiEyeCloseFill } from "react-icons/ri";
 import { AuthContex } from '../../../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     let [eye, setEye]= useState(false)
@@ -43,7 +44,14 @@ const Register = () => {
             updateUserProfile(fullName, photoUrl, email)
             .then(()=>{
                 if(result.user){
-                    toast("Create account successfully!");
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Create account successfully!",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                    
                     setTimeout(()=>{
                         
                         Navigate(location?.state ? location.state : '/')

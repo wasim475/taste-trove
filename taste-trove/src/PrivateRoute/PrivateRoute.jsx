@@ -5,9 +5,9 @@ import { AuthContex } from "../AuthProvider/AuthProvider";
 
 
 const PrivateRoute = ({children}) => {
-    const {user, loding}= useContext(AuthContex)
+    const {user, loading}= useContext(AuthContex)
     const location = useLocation()
-    if(loding){
+    if(loading){
         return  <div className="text-center">
                 <span className="loading loading-bars loading-xs"></span>
                 <span className="loading loading-bars loading-sm"></span>
