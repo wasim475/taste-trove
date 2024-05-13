@@ -9,29 +9,17 @@ const UserChoice = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const FoodName = form.FoodName.value;
-    const FoodCategory = form.FoodCategory.value;
     const shortDescription = form.shortDescription.value;
-    const price = form.price.value;
-    const countryName = form.countryName.value;
-    const quantity = form.quantity.value;
-    const userEmail = form.userEmail.value;
     const userName = form.userName.value;
     const photoUrl = form.photoUrl.value;
 
-    const FoodData = {
-      FoodName,
-      FoodCategory,
+    const galleryData = {
       shortDescription,
-      price,
-      countryName,
-      quantity,
-      userEmail,
       userName,
       photoUrl
     };
 
-    console.log(FoodData);
+    console.log(galleryData);
 
     fetch("https://taste-trove-server-sigma.vercel.app/userChoice", {
       method: "POST",
