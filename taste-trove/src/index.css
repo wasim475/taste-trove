@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.grid-container > img:nth-child(3) {
+    @apply col-span-3;
+  }

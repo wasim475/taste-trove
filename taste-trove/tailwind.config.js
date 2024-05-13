@@ -9,6 +9,7 @@ export default {
       backgroundImage: {
         'errorImg': "url('src/assets/404.png')",
         'footer-texture': "url('/img/footer-texture.png')",
+        'galleryImg': "url('https://i.ibb.co/mJt4HZB/chesley-mccarty-Ziml-F1xe-Z8k-unsplash.jpg')"
       },
       fontFamily: {
         'Raleway': ["Raleway", 'serif'],
