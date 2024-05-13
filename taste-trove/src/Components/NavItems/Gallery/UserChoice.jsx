@@ -26,7 +26,7 @@ const UserChoice = () => {
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify(FoodData)
+      body: JSON.stringify(galleryData)
     })
       .then((res) => res.json())
       .then((data) => {
