@@ -1,20 +1,24 @@
 import { useContext } from "react";
-
-import Swal from "sweetalert2";
 import { AuthContex } from "../../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
+
 
 const UserChoice = () => {
   let { user } = useContext(AuthContex);
+  
 
   const handleSubmit = (e) => {
+    console.log('hello bhai');
     e.preventDefault();
     const form = e.target;
-    const shortDescription = form.shortDescription.value;
+    const feedBack = form.feedBack.value;
     const userName = form.userName.value;
     const photoUrl = form.photoUrl.value;
 
     const galleryData = {
-      shortDescription,
+      feedBack,
       userName,
       photoUrl
     };
@@ -32,21 +36,17 @@ const UserChoice = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Food Added Successfully",
-            icon: "success",
-            confirmButtonText: "Exit"
-          });
-          form.FoodName.value = "";
-          form.FoodCategory.value = "";
-          form.shortDescription.value = "";
-          form.price.value = "";
-          form.countryName.value = "";
-          form.quantity.value = "";
-        //   form.userEmail.value = "";
-        //   form.userName.value = "";
+          toast("Food Added Successfully")
+          // Swal.fire({
+          //   title: "Success!",
+          //   text: "Food Added Successfully",
+          //   icon: "success",
+          //   confirmButtonText: "Exit"
+          // });
+          form.feedBack.value = "";
           form.photoUrl.value = "";
+        }else{
+            console.log('error khaichi');
         }
       });
   };
@@ -105,7 +105,7 @@ const UserChoice = () => {
                   </div>
                   <textarea
                     className="textarea textarea-bordered"
-                    name="shortDescription"
+                    name="feedBack"
                     placeholder="Write your Feedback here."
                   ></textarea>
                 </label>
@@ -113,6 +113,7 @@ const UserChoice = () => {
             </div>
 
             <input type="submit" className="btn btn-block" value="Submit" />
+            <ToastContainer></ToastContainer>
           </div>
         </form>
       </div>

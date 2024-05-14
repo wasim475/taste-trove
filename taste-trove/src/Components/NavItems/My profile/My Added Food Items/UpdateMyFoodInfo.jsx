@@ -63,15 +63,7 @@ const UpdateMyFoodInfo = () => {
             icon: "success",
             confirmButtonText: "Close"
           });
-          form.FoodName.value = "";
-          form.FoodCategory.value = "";
-          form.shortDescription.value = "";
-          form.price.value = "";
-          form.countryName.value = "";
-          form.quantity.value = "";
-        //   form.userEmail.value = "";
-        //   form.userName.value = "";
-          form.photoUrl.value = "";
+          
         }
       });
   };

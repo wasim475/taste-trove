@@ -16,6 +16,8 @@ import SingleFoodPage from "../Components/NavItems/AllFoods/SingleFoodPage";
 import AllFoods from "../Components/NavItems/AllFoods/AllFoods";
 import UpdateMyFoodInfo from "../Components/NavItems/My profile/My Added Food Items/UpdateMyFoodInfo";
 import UserChoice from "../Components/NavItems/Gallery/UserChoice";
+import MyRoute from "../My Route/MyRoute";
+
 // ..
 AOS.init();
 
@@ -54,8 +56,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/gallery",
-        element: <Gallery></Gallery>,
-        loader: () => fetch("https://taste-trove-server-sigma.vercel.app/foods")
+        element: <MyRoute>
+          <Gallery></Gallery>
+        </MyRoute>,
+        loader: () => fetch("https://taste-trove-server-sigma.vercel.app/userChoice")
       },
       {
         path: "/added-food-item",

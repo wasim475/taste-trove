@@ -35,15 +35,15 @@ const Gallery = () => {
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                 ✕
               </button>
-              <UserChoice></UserChoice>
             </form>
+              <UserChoice></UserChoice>
           </div>
         </dialog>
       </section>
 
 
       <section>
-        <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4 grid-container">
+        <div className="container grid grid-cols-2 grid-container gap-4 p-4 mx-auto md:grid-cols-4 grid-container">
           {AllFoods.map((Food, index) => (
             <ViewGalleryItems
               key={index}

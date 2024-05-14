@@ -1,4 +1,4 @@
-const ViewGalleryItems = ({ Food, user }) => {
+const ViewGalleryItems = ({ Food }) => {
   const {
     FoodName,
     FoodCategory,
@@ -17,7 +17,6 @@ const ViewGalleryItems = ({ Food, user }) => {
         <img src={photoUrl} />
         <div className=" hidden absolute text-center flex flex-col transition group-hover:duration-150 ease-in-out items-center top-0 group-hover:block left-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)] h-full w-full">
           <h1 className="text-white mt-10 mb-2">{userName}</h1>
-          <button className="border rounded-lg px-4 py-1 text-white">Add</button>
         </div>
       </div>
     </section>
