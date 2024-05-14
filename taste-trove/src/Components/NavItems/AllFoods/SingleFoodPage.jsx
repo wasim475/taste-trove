@@ -1,5 +1,5 @@
-import { useLoaderData, useParams } from "react-router-dom";
-import Swal from "sweetalert2";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+
 
 
 const SingleFoodPage = () => {
@@ -19,23 +19,7 @@ const SingleFoodPage = () => {
         _id
       } = MyFood;
 
-    const handlePurchase = ()=>{
-        if(FoodName=== 'In Stock'){
-            Swal.fire({
-                title: 'Success!',
-                text: 'Item Added to cart',
-                icon: 'success',
-                confirmButtonText: 'Close'
-              })
-        }else{
-            Swal.fire({
-                text: 'Item out of Stock',
-                icon: 'error',
-                confirmButtonText: 'Close'
-              })
-        }
-    }
-  
+    
 
     return (
      <>
@@ -56,7 +40,7 @@ const SingleFoodPage = () => {
                         <p className="">Contact with Food maker: <span className="font-medium">{userEmail}</span></p>
 
                        <div className="mt-10 flex gap-x-3">
-                            <button onClick={handlePurchase} className="border-2 rounded-lg px-4 py-2 bg-yellow-600 font-semibold text-white">Purchase</button>
+                           <Link to={`/purchase/${_id}`}> <button className="border-2 rounded-lg px-4 py-2 bg-yellow-600 font-semibold text-white">Purchase</button></Link>
                             
                        </div>
 
