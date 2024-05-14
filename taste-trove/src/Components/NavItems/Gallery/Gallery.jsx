@@ -13,7 +13,7 @@ const Gallery = () => {
 
 
       <section className="bg-galleryImg bg-center p-20 text-center">
-        <h1 className="text-white mb-10">
+        <h1 className="text-white mb-10 font-bold font-Lora bg-[#00000019] rounded-full">
           Share Your Feedback With Us. Click on the Add button and share your
           exprerience.
         </h1>
@@ -22,7 +22,7 @@ const Gallery = () => {
         user? '': '/userChoice'
        }>
        <button
-          className="btn"
+          className="btn px-10 bg-green-400 rounded-xl text-white font-Lora font-bold"
           onClick={() => document.getElementById("my_modal_3").showModal()}
         >
           Add
@@ -39,11 +39,12 @@ const Gallery = () => {
               <UserChoice></UserChoice>
           </div>
         </dialog>
+        
       </section>
 
 
       <section>
-        <div className="container grid grid-cols-2 grid-container gap-4 p-4 mx-auto md:grid-cols-4 grid-container">
+        <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4 grid-container">
           {AllFoods.map((Food, index) => (
             <ViewGalleryItems
               key={index}
