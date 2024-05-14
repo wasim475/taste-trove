@@ -68,6 +68,7 @@ const UserChoice = () => {
                   </div>
                   <input
                     type="text"
+                    required
                     name="photoUrl"
                     placeholder="Image url type here"
                     className="input input-bordered w-full"
