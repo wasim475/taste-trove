@@ -1,4 +1,5 @@
 import Banner from "../../Components/Banner/Banner";
+import RecentAddedFood from "../../Components/RecentlyAddedFood/RecentAddedFood";
 import UserFeedBack from "../../Components/UserFeedBack/UserFeedBack";
 import FoodItem from "../Food Items/FoodsItem";
 
@@ -10,6 +11,7 @@ const Home = () => {
 
             <Banner></Banner>
             <FoodItem></FoodItem>
+            <RecentAddedFood></RecentAddedFood>
             <UserFeedBack></UserFeedBack>
         </div>
         </>
