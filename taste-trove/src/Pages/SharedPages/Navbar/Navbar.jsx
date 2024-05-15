@@ -21,23 +21,7 @@ const Navbar = () => {
       <li>
         <NavLink to="/gallery">Gallery</NavLink>
       </li>
-      {user ? (
-        <li>
-          <details>
-            <summary>My Profile</summary>
-            <ul className="p-2 z-10">
-              <li>
-                <Link>Submenu 1</Link>
-              </li>
-              <li>
-                <Link>Submenu 2</Link>
-              </li>
-            </ul>
-          </details>
-        </li>
-      ) : (
-        ""
-      )}
+     
     </>
   );
 

@@ -15,7 +15,7 @@ const Purchase = () => {
  console.log('my purchase data is', myPurchaseData);
 
   const handlePurchase = (e) => {
-    const PurseBtn = document.getElementById('PurseBtn')
+    // const PurseBtn = document.getElementById('PurseBtn')
     
     e.preventDefault();
     const form = e.target;
@@ -64,7 +64,7 @@ const Purchase = () => {
           form.price.value = "";
           form.quantity.value = "";
         }else{
-            PurseBtn.setAttribute("disabled")
+            // PurseBtn.setAttribute("disabled")
             Swal.fire({
                 title: "Error!",
                 text: "Food Purchases Fail",

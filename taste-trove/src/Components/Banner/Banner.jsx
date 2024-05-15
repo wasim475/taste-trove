@@ -6,11 +6,11 @@ import slider4 from "../../assets/SliderImages/sl4.png";
 const Banner = () => {
   return (
     <>
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10">
       <div className="carousel w-full">
         <div
           id="slide1"
-          className="carousel-item relative w-full bg-gradient-to-r from-orange-400 to-orange-500"
+          className="carousel-item relative w-full bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg"
         >
           <div data-aos="slide-right"  data-aos-duration="1500" className="w-3/6 hidden lg:flex flex-col items-cente px-2r justify-center lg:px-20 ">
             <h1 className="text-3xl font-bold mb-3 font-Lora ">
@@ -24,7 +24,7 @@ const Banner = () => {
             </h2>
 
             <Link to="/allFoods">
-              <button data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1000" className="border px-10 py-1 rounded-lg bg-green-400 text-white font-semibold">
+              <button data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" className="border px-10 py-1 rounded-lg bg-green-400 text-white font-semibold">
                 See More
               </button>
             </Link>
