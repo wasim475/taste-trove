@@ -21,7 +21,7 @@ console.log(firstSixFood);
 
     return (
         <>
-            <div className="container mx-auto mt-16">
+            <div className="container mx-auto mt-16 mb-16">
                 <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3">
                     {
                         firstSixFood.map((FoodItem, index)=>(

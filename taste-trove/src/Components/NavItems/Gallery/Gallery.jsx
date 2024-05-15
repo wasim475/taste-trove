@@ -13,7 +13,7 @@ const Gallery = () => {
 
 
       <section className="bg-galleryImg bg-center p-20 text-center">
-        <h1 className="text-white mb-10 font-bold font-Lora bg-[#00000019] rounded-full">
+        <h1 className="text-white mb-10 font-bold text-3xl font-Lora bg-[#00000019] rounded-full">
           Share Your Feedback With Us. Click on the Add button and share your
           exprerience.
         </h1>
@@ -22,7 +22,7 @@ const Gallery = () => {
         user? '': '/userChoice'
        }>
        <button
-          className="btn px-10 bg-green-400 rounded-xl text-white font-Lora font-bold"
+          className="btn px-10 bg-green-400 text-xl rounded-xl text-white font-Lora font-bold"
           onClick={() => document.getElementById("my_modal_3").showModal()}
         >
           Add
