@@ -19,7 +19,8 @@ const RecentAddedFood = () => {
     setBannerData(mdata)
   }
 
-  let {photoUrl,shortDescription,price, userName}=firsFourFood
+  let {photoUrl,shortDescription,price, userName}=bennerData;
+//   let {photoUrl,shortDescription,price}=bennerData
 
   return (
     <>
