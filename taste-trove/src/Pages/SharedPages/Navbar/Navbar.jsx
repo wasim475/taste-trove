@@ -106,7 +106,7 @@ const Navbar = () => {
                     <Link to="/added-food-item">Add a food item</Link>
                   </li>
                   <li>
-                    <Link to="/my-profile">My ordered food items</Link>
+                    <Link to="/my-order-list">My ordered food items</Link>
                   </li>
                   <li>
                     <Link onClick={handleLogout}>Log Out</Link>

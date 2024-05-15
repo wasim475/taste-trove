@@ -19,6 +19,7 @@ import UserChoice from "../Components/NavItems/Gallery/UserChoice";
 import MyRoute from "../My Route/MyRoute";
 import CheckOut from "../Components/NavItems/AllFoods/Purchase";
 import Purchase from "../Components/NavItems/AllFoods/Purchase";
+import MyOrderedFood from "../Components/NavItems/My profile/My Order Food Items/MyOrderedFood";
 
 // ..
 AOS.init();
@@ -54,6 +55,12 @@ const router = createBrowserRouter([
         path: '/userChoice',
         element: <PrivateRoute>
           <UserChoice></UserChoice>
+        </PrivateRoute>
+      },
+      {
+        path: '/my-order-list',
+        element: <PrivateRoute>
+          <MyOrderedFood></MyOrderedFood>
         </PrivateRoute>
       },
       {

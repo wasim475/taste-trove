@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { MdDelete } from "react-icons/md";
+import { CiEdit } from "react-icons/ci";
+import { FaEye } from "react-icons/fa";
 
-const ViewMyAddedFood = ({ myFood, myFoods, setMyFoodDatas }) => {
+const ViewMyAddedFood = ({ myFood, myFoodsDatas, setMyFoodDatas }) => {
   const {
     FoodName,
     FoodCategory,
@@ -15,7 +18,7 @@ const ViewMyAddedFood = ({ myFood, myFoods, setMyFoodDatas }) => {
     _id
   } = myFood;
 
-  const handleDelete = (_id) => {
+  const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -37,8 +40,8 @@ const ViewMyAddedFood = ({ myFood, myFoods, setMyFoodDatas }) => {
                 text: "Your file has been deleted.",
                 icon: "success"
             });
-            const ResidualFood = myFoods.filter((myfood) => myfood._id !== _id)
-            setMyFoodDatas(ResidualFood)
+            const ResidualFood = myFoodsDatas.filter((myfood) => myfood._id !== id);
+            setMyFoodDatas(ResidualFood);
         }
 
           });
@@ -74,21 +77,23 @@ const ViewMyAddedFood = ({ myFood, myFoods, setMyFoodDatas }) => {
         </div>
         <div className="text-center">
           <Link to={`/allFoods/${_id}`}>
-            <button className="border-2 rounded-lg px-2 py-1 hover:border-green-600 hover:bg-white  hover:text-green-600 bg-green-600 font-semibold text-white">
-              View
+            <button title="View Details" className="border-2 rounded-lg px-2 py-1 hover:border-green-600 hover:bg-white  hover:text-green-600 bg-green-600 font-semibold text-white">
+              <FaEye/>
+              
             </button>
           </Link>
 
           <button
+          title="Delete"
             onClick={() => handleDelete(_id)}
             className="border-2 rounded-lg px-2 py-1 hover:border-red-500 hover:bg-white  hover:text-red-500 bg-red-500 font-semibold text-white"
           >
-            Delete
+            <MdDelete/>
           </button>
 
           <Link to={`/updateFoodInfo/${_id}`}>
-            <button className="border-2 rounded-lg px-2 py-1 hover:border-red-500 hover:bg-white  hover:text-red-500 bg-red-500 font-semibold text-white">
-              Update
+            <button title="Update" className="border-2 rounded-lg px-2 py-1 hover:border-blue-500 hover:bg-white  hover:text-blue-500 bg-blue-500 font-semibold text-white">
+              <CiEdit/>
             </button>
           </Link>
         </div>

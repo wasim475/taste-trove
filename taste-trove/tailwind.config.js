@@ -9,7 +9,8 @@ export default {
       backgroundImage: {
         'errorImg': "url('src/assets/404.png')",
         'footer-texture': "url('/img/footer-texture.png')",
-        'galleryImg': "url('https://i.ibb.co/mJt4HZB/chesley-mccarty-Ziml-F1xe-Z8k-unsplash.jpg')"
+        'galleryImg': "url('https://i.ibb.co/mJt4HZB/chesley-mccarty-Ziml-F1xe-Z8k-unsplash.jpg')",
+        'AllFoodsBanner': "url('https://i.ibb.co/k4bqfsJ/ali-inay-y3a-P9oo9-Pjc-unsplash.jpg')"
       },
       fontFamily: {
         'Raleway': ["Raleway", 'serif'],

@@ -1,4 +1,5 @@
 
+import { Navigate } from "react-router-dom";
 import { AuthContex } from "../AuthProvider/AuthProvider";
 import { useContext } from "react";
 
@@ -14,6 +15,7 @@ const MyRoute = ({children}) => {
     if(user){
         return children;
     }
+    return <Navigate state={location?.pathname} to="/gallery"></Navigate>
     
 };
 

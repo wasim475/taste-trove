@@ -15,10 +15,10 @@ const MyAddedFoodItems = () => {
         <div>
             <div className="grid grid-cols-3 gap-3">
                 {
-                    myFoods.map((myFood,index)=>
+                    myFoodsDatas.map((myFood,index)=>
                         myFood.userEmail===user.email
                     ?
-                    <ViewMyAddedFood myFood ={myFood} myFoods={myFoods} setMyFoodDatas={setMyFoodDatas} key={index}></ViewMyAddedFood>
+                    <ViewMyAddedFood myFood ={myFood} myFoodsDatas={myFoodsDatas} setMyFoodDatas={setMyFoodDatas} key={index}></ViewMyAddedFood>
                     :
                     ""
                     
