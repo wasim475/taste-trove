@@ -12,7 +12,7 @@ const Banner = () => {
           id="slide1"
           className="carousel-item relative w-full bg-gradient-to-r from-orange-400 to-orange-500"
         >
-          <div data-aos="slide-right"  data-aos-duration="1500" className="w-3/6 flex flex-col items-center justify-center px-20 ">
+          <div data-aos="slide-right"  data-aos-duration="1500" className="w-3/6 hidden lg:flex flex-col items-cente px-2r justify-center lg:px-20 ">
             <h1 className="text-3xl font-bold mb-3 font-Lora ">
               Bowl biryani with chicken pieces
             </h1>
@@ -29,7 +29,7 @@ const Banner = () => {
               </button>
             </Link>
           </div>
-          <div data-aos="slide-left"  data-aos-duration="2000" className="w-3/6">
+          <div data-aos="slide-left"  data-aos-duration="2000" className="w-full lg:w-3/6">
             <img src={slider1} className="w-full h-[99vh]" />
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

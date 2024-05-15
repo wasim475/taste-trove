@@ -1,4 +1,5 @@
 import Banner from "../../Components/Banner/Banner";
+import UserFeedBack from "../../Components/UserFeedBack/UserFeedBack";
 import FoodItem from "../Food Items/FoodsItem";
 
 
@@ -9,6 +10,7 @@ const Home = () => {
 
             <Banner></Banner>
             <FoodItem></FoodItem>
+            <UserFeedBack></UserFeedBack>
         </div>
         </>
     );
